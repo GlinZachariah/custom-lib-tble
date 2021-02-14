@@ -1,19 +1,33 @@
-<table>
-  <thead>
-    <th *ngFor="let header of headers">
-      {{header.value}}
-    </th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let innerRow of row">
-        {{innerRow.value}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-<div *ngIf="conditionValid">
-  The data is valid
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <th *ngFor="let header of headers">
+        {{header.value}}
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of rows">
+        <td *ngFor="let innerRow of row">
+          {{innerRow.value}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+  <div *ngIf="conditionValid" class="paginator">
+    <button (click)="goTo(0)">
+      &#60; &#60;
+    </button>
+    <button (click)="goTo(currentPage - 1)">
+      &#60;
+    </button>
+    <span class="space">{{currentPage + 1 }} / {{lastPage + 1}}</span>
+    <button (click)="goTo(currentPage + 1)">
+      >
+    </button>
+    <button (click)="goTo(lastPage)">
+      >>
+    </button>
+  </div>
+  <hr />
 </div>

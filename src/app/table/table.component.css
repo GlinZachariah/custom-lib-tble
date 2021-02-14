@@ -3,3 +3,16 @@ tr,
 td {
   border: 1px solid black;
 }
+
+.table-wrapper {
+  width: max-content;
+}
+
+.paginator {
+  display: flex;
+}
+
+.space {
+  flex: 1 1;
+  text-align: center;
+}

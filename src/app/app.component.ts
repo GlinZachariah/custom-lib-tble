@@ -13,4 +13,5 @@ export class AppComponent {
   dataSourceArray = POSTS_ARRAY;
   columnsToDisplay = ["userId", "id", "title"];
   arrayColumnFormat = ["userId", "id", "title", "body"];
+  pageSize = 5;
 }

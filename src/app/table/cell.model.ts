@@ -3,3 +3,8 @@ export class TableCell {
   colspan: number;
   constructor(public value: any) {}
 }
+
+export class Pages {
+  [pageid: number]: Array<TableCell[]>;
+  constructor(pageid: number) {}
+}
