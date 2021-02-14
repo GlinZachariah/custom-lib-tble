@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <th *ngFor="let header of headers">
+      {{header.value}}
+    </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let innerRow of row">
+        {{innerRow.value}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<div *ngIf="conditionValid">
+  The data is valid
+</div>
